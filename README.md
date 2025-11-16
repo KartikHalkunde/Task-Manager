@@ -1,4 +1,10 @@
-# Task Manager
+``` Java
+ ______         __       __  ___                           
+/_  __/__ ____ / /__    /  |/  /__ ____  ___ ____ ____ ____
+ / / / _ `(_-</  '_/   / /|_/ / _ `/ _ \/ _ `/ _ `/ -_) __/
+/_/  \_,_/___/_/\_\   /_/  /_/\_,_/_//_/\_,_/\_, /\__/_/   
+                                            /___/          
+```
 
 A simple command-line task management application built with Java to Manage your tasks with priorities, deadlines, and completion tracking.
 
