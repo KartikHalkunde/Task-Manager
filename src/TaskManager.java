@@ -43,16 +43,13 @@ public class TaskManager {
     }
 
     public ArrayList<Task> searchTask(String keyword){
-    ArrayList<Task> result = new ArrayList<>();
-    for(Task t: tasks){
-        if(t.getTitle().toLowerCase().contains(keyword.toLowerCase())){
-            result.add(t);
+        ArrayList<Task> result = new ArrayList<>();
+        for(Task t: tasks){
+            if(t.getTitle().toLowerCase().contains(keyword.toLowerCase())){
+                result.add(t);
+            }
         }
-        else{
-            System.out.println("Task not found!");
-        }
-    }    
-    return result;
+        return result;
     }
 
     private Task findTask(int id){

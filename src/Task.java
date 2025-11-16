@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Task{
     
-    private static int idCounter = 0;
+    private static int idCounter = 1;
 
     private final int id;
     private final String title;
