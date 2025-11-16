@@ -51,33 +51,50 @@ public class Main{
                         System.out.println("Task marked Completed!");
                     }
                     case 4 -> { // List All Tasks
-                        System.out.println("All Tasks: ");
-                        for(Task task : tm.getAllTasks()){
+                        if(tm.getAllTasks().isEmpty()){
+                            System.out.println("No tasks Avaliable.");
+                        } else {
+                            System.out.println("All Tasks: ");
+                            for(Task task : tm.getAllTasks()){
                             System.out.println(task);
                         }
+                        }                        
                     }
                     case 5 -> {  // List Pending Task
-                        System.out.println("Pending Tasks: ");
-                        for(Task task : tm.getPendingTasks())
-                        System.out.println(task);
+                        if(tm.getPendingTasks().isEmpty()){
+                            System.out.println("No pending tasks Avaliable.");
+                        }else{
+                            System.out.println("Pending Tasks: ");
+                            for(Task task : tm.getPendingTasks()){
+                            System.out.println(task);
+                            }
+                        }
                     }
                     case 6 -> {  // List Task By Priority
                         System.out.println("Enter Priority(LOW/MID/HIGH): ");
                         Priority filterPr = Priority.valueOf(sc.nextLine().toUpperCase());
 
+                        if(tm.getTasksByPriority(filterPr).isEmpty()){
+                            System.out.println("No tasks with "+ filterPr +" Priority");
+                        }else{
                         System.out.println("Tasks with " + filterPr + " priority : ");
                         for(Task task : tm.getTasksByPriority(filterPr)){
                             System.out.println(task);
                         }
                     }
+                    }
                     case 7 -> { //Search Task
                         System.out.println("Enter keyword: ");
                         String keyword = sc.nextLine();
 
+                        if(tm.searchTask(keyword).isEmpty()){
+                            System.out.println("No task with found with "+ keyword +" keyword");
+                        }else{
                         System.out.println("\nSearch Results: ");
                         for(Task task : tm.searchTask(keyword)){
                             System.out.println(task);
                         }
+                    }
                     }
                     case 8 -> { // Exit
                         System.out.println("Thankyou!");
