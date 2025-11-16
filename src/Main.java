@@ -39,12 +39,14 @@ public class Main{
                     case 2 -> { // Remove task
                         System.out.println("Enter Task ID: ");
                         int removeID = sc.nextInt();
+                        sc.nextLine();
                         tm.removeTask(removeID);
                         System.out.println("Task Removed!");
                     }
                     case 3 -> {  // Mark Completed
                         System.out.println("Enter Task ID: ");
                         int completedID = sc.nextInt();
+                        sc.nextLine();
                         tm.markCompleted(completedID);
                         System.out.println("Task marked Completed!");
                     }
